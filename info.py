@@ -24,8 +24,8 @@ auth_channel = environ.get(''-1002145600271')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
 # MongoDB information
-DATABASE_URI = environ['mongodb+srv://sankar:sankar@sankar.lldcdsx.mongodb.net/?retryWrites=true&w=majority']
-DATABASE_NAME = environ['Sankar']
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://autofilter:autofilter@autofilter.tponhhw.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "RIONETWORKS")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
