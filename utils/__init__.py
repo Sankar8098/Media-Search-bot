@@ -1,2 +1,8 @@
-from .helpers import unpack_new_file_id
-from .database import Media, save_file, get_search_results
+from aiohttp import web
+from .route import routes
+
+
+async def web_server():
+    web_app = web.Application(client_max_size=30000000)
+    web_app.add_routes(routes)
+    return web_app
